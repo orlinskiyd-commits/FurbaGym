@@ -288,7 +288,7 @@ const EX = {
   dbell:   {name:'Жим гантелей',        hint:'гантели · грудь',       pmOf:'bench', ratio:0.23, step:1.0, icon:'💪'},
   cable:   {name:'Тяга блока к поясу',   hint:'блок узкий хват · спина',  pmOf:'bench', ratio:0.50, step:2.5, icon:'🪝'},
   rdl:     {name:'Румынская тяга',      hint:'штанга · задняя цепь',  pmOf:'squat', ratio:0.60, step:2.5, icon:'🌑'},
-  french:  {name:'Французский жим',     hint:'штанга/гантели · трицепс', pmOf:'bench', ratio:0.25, step:1.0, icon:'👾'},
+  french:  {name:'Французский жим',     hint:'изогнутый гриф · трицепс', pmOf:'bench', ratio:0.25, step:2.5, minW:10,  icon:'👾'},
 };
 
 const EX_JOKES = {
@@ -1042,7 +1042,7 @@ function summaryHTML(){
   const nextD=sessionDate(S.sessionCount);
   const t=rec.total.tonnage;
   let charReview,charColor,charIcon;
-  if(t>3500){charReview='«Ладно. Ладно ладно ладно. Ты почти на уровне Бендера. Сказал — не сказал. Дай пять. Убери руку.»';charColor='var(--bender)';charIcon='🤖 Бендер:';}
+  if(t>3500){charReview='«Фрай, хоть ты кусок мяса, но ты мой самый любимый кусок мяса. Сегодня это относится к тебе.»';charColor='var(--bender)';charIcon='🤖 Бендер:';}
   else if(t>2500){charReview='«Хорошая работа. Техника была приемлемой. Если скажешь кому-нибудь что я сказала "хорошая работа" — я отрицаю.»';charColor='var(--leela-c)';charIcon='👁️ Лила:';}
   else if(t>1800){charReview='«Wow! Помнишь в S03E07 когда Фрай поднял всех? Нет? Ну, это было примерно так же круто!»';charColor='var(--fry)';charIcon='🍕 Фрай:';}
   else if(t>1000){charReview='«По форме 28B Бюро Достижений — твой результат ЗАСЧИТАН! Ямайский бобслей одобряет!»';charColor='var(--amy)';charIcon='📋 Хермес:';}
